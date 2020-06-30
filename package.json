@@ -1,0 +1,35 @@
+{
+  "name": "e-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "distwin": "electron-builder --win",
+    "postinstall": "electron-builder install-app-deps",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "start": "electron main.js"
+  },
+  "author":  { "name": "aaron","email":"aarong0608@hotmail.com" },
+  "homepage" : "https://www.google.com/",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  },
+  "build": {
+    "appId": "aaron.empresa.ejemplo.uno",
+    "linux": {
+      "target": [
+        "deb","AppImage"]
+    },
+    "win": {
+      "target":["nsis", "portable"],
+      "icon": "build/icons/512x512.ico"
+    },
+    "asar": true
+  },
+  "devDependencies": {
+    "electron": "^9.0.5",
+    "electron-builder": "^22.7.0"
+  }
+}
